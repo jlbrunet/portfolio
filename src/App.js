@@ -1,6 +1,7 @@
 import React from "react";
 import Presentation from "./Components/Presentation/Presentation";
 import Background from "./Components/Background";
+import About from "./Components/About";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="w-full h-full flex items-center justify-center">
         <Presentation />
       </div>
+      <About />
     </div>
   );
 }

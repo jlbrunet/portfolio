@@ -5,3 +5,18 @@
 #root {
   height: 100vh;
 }
+
+/* Scroll-bar */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.purple');
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(181, 151, 193);
+}
