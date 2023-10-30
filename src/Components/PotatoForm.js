@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 
-function PotatoForm(props) {
+const PotatoForm = props => {
   const maxWidth = props.maxWidth
   const maxHeight = props.maxHeight
 
@@ -26,12 +26,10 @@ function PotatoForm(props) {
 
   const formShape = {
     borderRadius: props.borderRadius,
-    top:  props.positionTop,
-    left: props.positionLeft
   };
 
   return(
-    <div style={{...formShape, ...divSize}} className={`absolute ${props.color}`}></div>
+    <div style={{...formShape, ...divSize}} className={`${props.color}`}></div>
   )
 }
 
