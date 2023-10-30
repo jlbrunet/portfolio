@@ -9,7 +9,7 @@ const Presentation = () => {
         <button className='m-3' style={{textShadow: '1px 1px 0 white'}}>EN</button>
       </div>
       <div className='text-center font-semibold' style={{textShadow: '4px 4px 0 white'}}>
-        <p className='mb-5 text-9xl'>Salut, moi c'est Julie !</p>
+        <p className='mb-5 text-9xl'>Salut, moi c'est Julie</p>
         <p className='text-7xl'>Développeuse Web Fullstack</p>
       </div>
         <div className='mb-12 flex justify-center'>
