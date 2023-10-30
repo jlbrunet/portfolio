@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         green: '#dceae0',
-        lime: '#dfe6c0',
-        purple: '#CEBEBE'
+        lime: 'rgb(223, 230, 192)',
+        purple: 'rgb(206, 190, 190, 0.4)'
       },
     },
   },

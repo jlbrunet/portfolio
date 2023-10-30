@@ -22,14 +22,16 @@ function PotatoForm(props) {
     const percentage = (windowWidth / 1500)
     const formSize = {width: `${percentage * maxWidth}rem`, height: `${percentage * maxHeight}rem`};
     setSize(formSize)
-  }, [windowWidth])
+  }, [windowWidth, maxHeight, maxWidth])
 
-  const formShapeOne = {
-    borderRadius: props.borderRadius
+  const formShape = {
+    borderRadius: props.borderRadius,
+    top:  props.positionTop,
+    left: props.positionLeft
   };
 
   return(
-    <div style={{...formShapeOne, ...divSize}} className={`bg-lime absolute ${props.positionTop} ${props.positionLeft}`}></div>
+    <div style={{...formShape, ...divSize}} className={`absolute ${props.color}`}></div>
   )
 }
 
