@@ -29,7 +29,7 @@ const PotatoForm = props => {
   };
 
   return(
-    <div style={{...formShape, ...divSize}} className={`${props.color}`}></div>
+    <div style={{...formShape, ...divSize}} className={`${props.color} ${props.opacity}`}></div>
   )
 }
 

@@ -1,11 +1,20 @@
 import React from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
+import Spark from './Spark/Spark'
 
 const About = () => {
   return (
     <div className='w-full h-full'>
-      <p>Etincelles</p>
-      <img src={profilePicture} alt="profil" width='200' className='rounded-full border-4 border-lime'></img>
+      <div className='ml-96 mt-96 w-56 flex flex-col'>
+        <div className='relative flex items-center justify-center'>
+          <div className="w-0 absolute top-10 left-5" style={{transform: 'rotate(200deg)'}}><Spark /></div>
+          <div className="w-0 absolute top-6 left-8" style={{transform: 'rotate(220deg)'}}><Spark /></div>
+          <div className="w-0 absolute top-3 left-12" style={{transform: 'rotate(240deg)'}}><Spark /></div>
+        </div>
+        <div className='flex items-center justify-center'>
+          <img src={profilePicture} alt="profil" width='200' className='rounded-full border-4 border-lime'></img>
+        </div>
+      </div>
       <p>Bienvenue !
         Je suis une développeuse web fullstack basée à Paris.
         Passionnée par le code et le design graphique, j'ai suivi la formation du Wagon afin d'apprendre les fondements du code et de la programmation orientée objet. Autodidacte, j'ai ensuite continué de me former et j'ai eu l'opportunité de travailler sur différents projets, en équipe et seule.
