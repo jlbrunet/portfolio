@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  background-color: theme('colors.beige');
+  color: theme('colors.grey');
+  font-family: Karla, Arial, sans-serif
+}
+
 #root {
   height: 100vh;
 }
@@ -13,10 +19,10 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: theme('colors.purple');
+  background-color: theme('colors.purple' / 40%);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(181, 151, 193);
+  background: theme('colors.purple');
 }
