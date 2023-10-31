@@ -1,6 +1,8 @@
 import React from "react";
 import Presentation from "./Components/Presentation/Presentation";
 import About from "./Components/About";
+import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
         <Presentation />
       </div>
       <About />
+      <Projects />
+      <Contact />
     </div>
   );
 }
