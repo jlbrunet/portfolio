@@ -3,7 +3,9 @@
 @import "tailwindcss/utilities";
 
 body {
-  font-family: Karla, Arial, sans-serif;
+  background-color: theme('colors.beige');
+  color: theme('colors.grey');
+  font-family: Karla, Arial, sans-serif
 }
 
 #root {

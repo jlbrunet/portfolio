@@ -6,7 +6,7 @@ const Presentation = () => {
   return (
     <div className='relative w-full h-full'>
       <Background />
-      <div className='absolute top-0 left-0 w-full h-full text-grey flex flex-col justify-between'>
+      <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between'>
         <div className='text-2xl font-semibold mr-2 flex justify-end'>
           <button className='m-3' style={{textShadow: '1px 1px 0 white'}}>FR</button>
           <button className='m-3' style={{textShadow: '1px 1px 0 white'}}>EN</button>
