@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  font-family: Karla, Arial, sans-serif;
+}
+
 #root {
   height: 100vh;
 }

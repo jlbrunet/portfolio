@@ -3,7 +3,7 @@ import PotatoForm from './PotatoForm';
 
 const Background = () => {
   return (
-    <div className="fixed w-full h-full bg-beige z-minus1 flex items-center">
+    <div className="relative w-full h-full bg-beige z-minus1 flex items-center">
       <div className='absolute' style={{left: '10%', transform: 'translateY(-15%)'}}>
         <PotatoForm maxWidth="28" maxHeight="28" color="bg-lime" opacity="opacity-80" borderRadius="30% 60% 60% 40% / 70% 50% 50% 30%"/>
       </div>

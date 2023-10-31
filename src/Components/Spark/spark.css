@@ -1,20 +1,31 @@
 .spark {
-  height: 0.3rem;
-  border-radius: 30% 40% 40% 30% / 40% 40% 30% 30%;
-  background-color: theme('colors.purple');
+  width: 2.5em;
+  height: 0.5em;
+ }
+
+ .spark:after {
+  content: "";
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
   animation: after 2s infinite;
-}
+ }
 
  @keyframes after {
-  0% {width: 0.4rem}
-  10% {width: 0.5rem}
-  20% {width: 0.6rem}
-  30% {width: 0.7rem}
-  40% {width: 0.8rem}
-  50% {width: 0.9rem}
-  60% {width: 1rem}
-  70% {width: 1.1rem}
-  80% {width: 1.2rem}
-  90% {width: 1.3rem}
-  100% {width: 1.4rem}
+  0% {
+   width: 0.5em;
+   border-radius: 30% 40% 40% 30% / 40% 40% 30% 30%;
+   background-color: theme('colors.lime');
+  }
+
+  35% {
+   width: 2.5em;
+   border-radius: 30% 40% 40% 30% / 40% 40% 30% 30%;
+   background-color: theme('colors.lime');
+  }
+
+  100% {
+   border-radius: 30% 40% 40% 30% / 40% 40% 30% 30%;
+   background-color: theme('colors.lime');
+  }
  }
