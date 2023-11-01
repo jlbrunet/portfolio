@@ -1,25 +1,10 @@
-.scroll-button:hover {
-  animation: none 2s;
-  background-color: theme('colors.lime');
-  border-radius: 30% 60% 60% 40% / 70% 50% 50% 30%;
-  transition: background-color 0.5s
-}
-
-.scroll-button:hover .bubble {
-  width: 25px;
-  height: 25px;
-  background-color: theme('colors.lime');
-  border-radius: 30% 60% 60% 40% / 70% 50% 50% 30%;
+.scroll-button:hover ~ .bubble {
   transition-delay: 0.6s;
   transition-duration: 0.5s;
   transition-property: background-color
 }
 
-.scroll-button:hover .small-bubble {
-  width: 15px;
-  height: 15px;
-  background-color: theme('colors.lime');
-  border-radius: 30% 60% 60% 40% / 70% 50% 50% 30%;
+.scroll-button:hover  ~ .small-bubble {
   transition-delay: 0.7s;
   transition-duration: 0.5s;
   transition-property: background-color
