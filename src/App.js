@@ -1,18 +1,17 @@
 import React from "react";
-import Presentation from "./Components/Presentation/Presentation";
+import Home from "./Components/Home";
 import About from "./Components/About";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 
 function App() {
   return (
-    <div className="w-full h-full">
-      <div className="w-full h-full flex items-center justify-center">
-        <Presentation />
-      </div>
+    <div>
+      <Home />
       <About />
       <Projects />
       <Contact />
+      {/* Footer */}
     </div>
   );
 }
