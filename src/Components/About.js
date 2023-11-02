@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <ScrollButton />
+      <ScrollButton color="purple"/>
     </div>
   );
 }
