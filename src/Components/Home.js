@@ -18,8 +18,8 @@ const Home = () => {
           <button className='my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
         </div>
         <div>
-          <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>Salut, moi c'est Julie</p> {/*9xl*/}
-          <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Développeuse Web Fullstack</p> {/*7xl*/}
+          <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>Salut, moi c'est Julie</p>
+          <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Développeuse Web Fullstack</p>
         </div>
         <ScrollButton />
       </div>
