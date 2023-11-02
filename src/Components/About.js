@@ -1,13 +1,14 @@
 import React from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark/Spark'
+import ScrollButton from './ScrollButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLaptopCode} from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   return (
-    <div className='w-full h-screen flex flex-col'>
+    <div className='h-screen flex flex-col'>
       <div className='relative grow flex flex-col justify-center items-center'>
         <div className='w-full h-full relative'>
           <div className='absolute top-10 left-10 w-[100%] h-[100%] bg-lime opacity-80 rounded-custom1'></div>
@@ -38,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-center'>Scroll button</div>
+      <ScrollButton />
     </div>
   );
 }
