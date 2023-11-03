@@ -10,21 +10,27 @@ module.exports = {
         blue: 'rgb(153, 195, 190)',
         violet: 'rgb(59, 56, 82)',
         lime: 'rgb(223, 230, 192)',
-        purple: 'rgb(181, 151, 193)',
+        purple: 'rgb(181, 151, 193, 0.4)',
       },
       borderRadius: {
         custom1: '40% 60% 60% 30% / 70% 50% 50% 30%',
         custom2: '40% 60% 70% 40% / 70% 60% 50% 40%',
         custom3: '60% 50% 60% 50% / 60% 50% 70% 60%',
+        custom4: '30% 40% 40% 30% / 40% 40% 30% 30%',
       },
       keyframes: {
         down: {
           '0%, 40%': {transform: 'translateY(0)'},
           '20%': {transform: 'translateY(1rem)'}
+        },
+        spark: {
+          '0%': {width: '0.5em'},
+          '35%': {width: '2.5em'},
         }
       },
       animation: {
-        down: 'down 2s infinite'
+        'down': 'down 2s infinite',
+        'spark': 'spark 2s infinite'
       },
     },
   plugins: [],
