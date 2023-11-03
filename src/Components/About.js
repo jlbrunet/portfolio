@@ -39,7 +39,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <ScrollButton color="purple"/>
+      <ScrollButton hoverColor="hover:bg-purple" groupHoverColor="group-hover:bg-purple"/>
     </div>
   );
 }
