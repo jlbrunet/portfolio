@@ -9,6 +9,3 @@ const Spark = (props) => {
 }
 
 export default Spark;
-
-
-// w-10 h-2 after:w-2 after:bg-lime after:rounded-custom4 after:animate-spark after:block after:content-none

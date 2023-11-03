@@ -8,6 +8,7 @@ module.exports = {
       colors: {
         beige: 'rgb(248, 233, 216, 0.8)',
         blue: 'rgb(153, 195, 190)',
+        blueLight: 'rgb(153, 195, 190, 0.4)',
         violet: 'rgb(59, 56, 82)',
         lime: 'rgb(223, 230, 192)',
         purple: 'rgb(181, 151, 193, 0.4)',
@@ -17,6 +18,7 @@ module.exports = {
         custom2: '40% 60% 70% 40% / 70% 60% 50% 40%',
         custom3: '60% 50% 60% 50% / 60% 50% 70% 60%',
         custom4: '30% 40% 40% 30% / 40% 40% 30% 30%',
+        custom5: '20% 20% 20% 20%',
       },
       keyframes: {
         down: {

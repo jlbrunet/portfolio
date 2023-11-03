@@ -25,13 +25,13 @@ const About = () => {
             <br></br>
             <p className='text-xs sm:text-base lg:text-xl'><b>Autodidacte</b>, j'ai ensuite continué de me former et j'ai eu l'opportunité de travailler sur différents projets, en équipe et seule. Je t'invite à regarder les projets que j'ai réalisé :</p>
             <div className='w-full flex justify-center pb-[3%]'>
-              <button className='rounded-custom2 bg-purple text-violet text-xs sm:text-xl lg:text-2xl p-[0.8%]'>
+              <button className='rounded-custom2 bg-purple text-xs sm:text-xl lg:text-2xl p-[0.8%]'>
                 <FontAwesomeIcon icon={faLaptopCode} />
               </button>
             </div>
             <p className='text-xs sm:text-base lg:text-xl pb-[2%]'>J'interviens sur l'ensemble de l'élaboration du site web, de la <b>conception à la programmation</b>, assurant ensuite sa maintenance. Si tu souhaites que l'on travaille ensemble, n'hésite pas à me contacter :</p>
             <div className='w-full flex justify-center'>
-              <button className='rounded-custom3 bg-blue text-violet text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%]'>
+              <button className='rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%]'>
                 <FontAwesomeIcon icon={faEnvelope} />
               </button>
             </div>
