@@ -1,4 +1,7 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBrands } from '@fortawesome/free-solid-svg-icons'
+import { faSquareJs } from '@fortawesome/free-solid-svg-icons'
 
 const ProjectCard = (props) => {
 
