@@ -3,8 +3,7 @@ import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
 import ScrollButton from './ScrollButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-import { faLaptopCode} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   return (
