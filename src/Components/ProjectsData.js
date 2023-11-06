@@ -30,7 +30,7 @@ export const ProjectsData = [
     id: 3,
     title: "My Only Sub",
     linkVideo: "",
-    description: "A partir d'une liste de films et de séries et d'un temps de visionnage mensuel, proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
+    description: "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
     languages: [
       { key:"rubyIcon", element:"https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" },
       { key:"rubyOnRailsIcon", element:"https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
