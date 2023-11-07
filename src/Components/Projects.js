@@ -19,7 +19,6 @@ const Projects = () => {
           </div>)
         })}
       </div>
-      <ScrollButton hoverColor="hover:bg-blueLight" groupHoverColor="group-hover:bg-blueLight"/>
     </div>
    );
 }

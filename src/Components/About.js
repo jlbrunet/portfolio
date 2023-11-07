@@ -3,7 +3,7 @@ import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
 import ScrollButton from './ScrollButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const About = () => {
   return (
@@ -20,15 +20,11 @@ const About = () => {
             <p className='text-center text-xl sm:text-3xl lg:text-6xl'><b>Bienvenue !</b></p>
             <br></br>
             <br></br>
-            <p className='text-xs sm:text-base lg:text-xl'>Je suis une <b>développeuse web fullstack</b> basée à Paris. Passionnée par le code et le design graphique, j'ai suivi la formation du Wagon afin d'apprendre les fondements du code et de la programmation orientée objet.</p>
+            <p className='text-xs sm:text-base lg:text-xl'>Je suis une <b>développeuse web fullstack</b> basée à Paris. Passionnée par l'art de créer des sites web à la fois fonctionnels et esthétiques, j'ai suivi la formation du Wagon afin d'apprendre les fondements du code et de la programmation orientée objet.</p>
             <br></br>
-            <p className='text-xs sm:text-base lg:text-xl'><b>Autodidacte</b>, j'ai ensuite continué de me former et j'ai eu l'opportunité de travailler sur différents projets, en équipe et seule. Je t'invite à regarder les projets que j'ai réalisé :</p>
-            <div className='w-full flex justify-center pb-[3%]'>
-              <button className='rounded-custom2 bg-purple text-xs sm:text-xl lg:text-2xl p-[0.8%]'>
-                <FontAwesomeIcon icon={faLaptopCode} />
-              </button>
-            </div>
-            <p className='text-xs sm:text-base lg:text-xl pb-[2%]'>J'interviens sur l'ensemble de l'élaboration du site web, de la <b>conception à la programmation</b>, assurant ensuite sa maintenance. Si tu souhaites que l'on travaille ensemble, n'hésite pas à me contacter :</p>
+            <p className='text-xs sm:text-base lg:text-xl'><b>Autodidacte</b>, j'ai ensuite continué de me former  en explorant de nouvelles technologies et en relevant des défis passionnants. J'ai eu l'opportunité de travailler sur divers sites web, tant en équipe qu'en solo. Ces expériences m'ont permis d'acquérir une expertise variée, allant <b>de la conception à la programmation</b>, et assurant par la suite la maintenance des sites web.</p>
+            <br></br>
+            <p className='text-xs sm:text-base lg:text-xl'>Aujourd'hui, je mets cette passion et cette expertise au service de mes projets et de mes clients, afin de créer des solutions web innovantes et adaptées à leurs besoins. <b>Impatiente de relever de nouveaux défis</b>, n’hésite pas à me contacter si tu souhaites que l’on travaille ensemble </p>
             <div className='w-full flex justify-center'>
               <button className='rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%]'>
                 <FontAwesomeIcon icon={faEnvelope} />
