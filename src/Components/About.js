@@ -27,7 +27,7 @@ const About = () => {
             <p className='text-xs sm:text-base lg:text-xl'>Aujourd'hui, je mets cette passion et cette expertise au service de mes projets et de mes clients, afin de créer des solutions web innovantes et adaptées à leurs besoins. <b>Impatiente de relever de nouveaux défis</b>, n’hésite pas à me contacter si tu souhaites que l’on travaille ensemble </p>
             <div className='w-full flex justify-center'>
               <button className='rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%]'>
-                <FontAwesomeIcon icon={faEnvelope} />
+              <a href="mailto:juliebrunet.pro@outlook.fr"><FontAwesomeIcon icon={faEnvelope} /></a>
               </button>
             </div>
           </div>

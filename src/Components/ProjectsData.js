@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSquareJs, faReact, faBootstrap } from '@fortawesome/free-brands-svg-icons'
+import { DiJavascript, DiReact, DiRubyRough } from 'react-icons/di';
+import { BiLogoTailwindCss, BiLogoBootstrap } from 'react-icons/bi'
+import { SiRubyonrails } from 'react-icons/si'
 
 export const ProjectsData = [
   {
@@ -8,9 +9,9 @@ export const ProjectsData = [
     linkVideo: "",
     description: "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
     languages: [
-      { key:"jsIcon", element: <FontAwesomeIcon icon={faSquareJs} /> },
-      { key:"reactIcon", element:<FontAwesomeIcon icon={faReact} /> },
-      { key:"tailwindIcon", element:"https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" }
+      { key:"jsIcon", element: <DiJavascript />, text: "JavaScript" },
+      { key:"reactIcon", element:<DiReact />, text: "React" },
+      { key:"tailwindIcon", element:<BiLogoTailwindCss />, text: "Tailwind" }
     ],
     linkCode: "https://github.com/jlbrunet/portfolio"
   },
@@ -20,9 +21,9 @@ export const ProjectsData = [
     linkVideo: "",
     description: "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
     languages: [
-      { key:"rubyIcon", element:"https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" },
-      { key:"rubyOnRailsIcon", element:"https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
-      { key:"bootstrapIcon", element:<FontAwesomeIcon icon={faBootstrap} /> }
+      { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
+      { key:"rubyOnRailsIcon", element:<SiRubyonrails />, text: "Ruby on Rails" },
+      { key:"bootstrapIcon", element:<BiLogoBootstrap />, text: "Bootstrap" }
     ],
     linkCode: "https://github.com/jlbrunet/Paris_Impro_Application"
   },
@@ -32,9 +33,9 @@ export const ProjectsData = [
     linkVideo: "",
     description: "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
     languages: [
-      { key:"rubyIcon", element:"https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" },
-      { key:"rubyOnRailsIcon", element:"https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
-      { key:"bootstrapIcon", element:<FontAwesomeIcon icon={faBootstrap} /> }
+      { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
+      { key:"rubyOnRailsIcon", element:<SiRubyonrails />, text: "Ruby on Rails" },
+      { key:"bootstrapIcon", element:<BiLogoBootstrap />, text: "Bootstrap" }
     ],
     linkCode: "https://github.com/b-laf/MyOnlySub"
   },
@@ -44,9 +45,9 @@ export const ProjectsData = [
     linkVideo: "",
     description: "Marketplace de mise en relation entre les stand-uppers et les clubs",
     languages: [
-      { key:"rubyIcon", element:"https://upload.wikimedia.org/wikipedia/commons/7/73/Ruby_logo.svg" },
-      { key:"rubyOnRailsIcon", element:"https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
-      { key:"bootstrapIcon", element:<FontAwesomeIcon icon={faBootstrap} /> }
+      { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
+      { key:"rubyOnRailsIcon", element:<SiRubyonrails />, text: "Ruby on Rails" },
+      { key:"bootstrapIcon", element:<BiLogoBootstrap />, text: "Bootstrap" }
     ],
     linkCode: "https://github.com/maxco2023/ON_AIR"
   }
