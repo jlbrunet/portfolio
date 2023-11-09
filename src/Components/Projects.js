@@ -6,6 +6,10 @@ import Footer from './Footer';
 const Projects = () => {
   return (
     <div id="projects">
+      <video width="640" height="360" controls>
+        <source src="assets/your-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className='flex flex-col justify-between'>
         <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets</p>
         <div className='flex flex-wrap justify-around px-20'>
