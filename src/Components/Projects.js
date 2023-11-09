@@ -6,12 +6,12 @@ import Footer from './Footer';
 const Projects = () => {
   return (
     <div id="projects">
-      {/* <video width="640" height="360" controls>
-        <source src={require("../assets/mosProject.mp4")} type="video/mp4" />
+      <video width="640" height="360" controls>
+        <source src={require("../assets/mosVideo.mp4")} type="video/mp4" />
         Your browser does not support the video tag.
-      </video> */}
+      </video>
       <div className='flex flex-col justify-between'>
-        <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets - SQL</p>
+        <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets - SQL - ajouter play - figma</p>
         <div className='flex flex-wrap justify-around px-20'>
           {ProjectsData.map((data) => {
             return(<div className='basis-1/2 flex justify-center p-6' key={data.id}>

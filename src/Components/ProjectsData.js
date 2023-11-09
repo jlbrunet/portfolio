@@ -17,8 +17,7 @@ export const ProjectsData = [
   },
   {
     id: 2,
-    title: "Paris Impro",
-    image: "",
+    image: <img src={require("../assets/parisImproImage.png")} alt="projet mos" />,
     description: "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
     languages: [
       { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
@@ -29,8 +28,8 @@ export const ProjectsData = [
   },
   {
     id: 3,
-    image: "My Only Sub",
-    linkVideo: "",
+    title: "My Only Sub",
+    image: <img src={require("../assets/mosImage.png")} alt="projet mos" />,
     description: "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
     languages: [
       { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
@@ -39,16 +38,4 @@ export const ProjectsData = [
     ],
     linkCode: "https://github.com/b-laf/MyOnlySub"
   },
-  {
-    id: 4,
-    image: "On Air",
-    linkVideo: "",
-    description: "Marketplace de mise en relation entre les stand-uppers et les clubs",
-    languages: [
-      { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
-      { key:"rubyOnRailsIcon", element:<SiRubyonrails />, text: "Ruby on Rails" },
-      { key:"bootstrapIcon", element:<BiLogoBootstrap />, text: "Bootstrap" }
-    ],
-    linkCode: "https://github.com/maxco2023/ON_AIR"
-  }
 ]
