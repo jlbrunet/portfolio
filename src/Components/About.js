@@ -1,13 +1,14 @@
 import React from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
-import ScrollButton from './ScrollButton';
+import ScrollButton from './ScrollButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-scroll';
 
 const About = () => {
   return (
-    <div className='h-screen flex flex-col'>
+    <div className='h-screen flex flex-col' id="about">
       <div className="h-full w-full flex items-center justify-center">
         <div className='relative w-[80%] h-[95%] bg-lime rounded-custom1'>
           <div className='relative absolute top-[0%] left-[8%]'>
@@ -33,7 +34,9 @@ const About = () => {
           </div>
         </div>
       </div>
-      <ScrollButton hoverColor="hover:bg-purple" groupHoverColor="group-hover:bg-purple"/>
+      <Link to="projects" smooth={true}>
+        <ScrollButton hoverColor="hover:bg-purple" groupHoverColor="group-hover:bg-purple"/>
+      </Link>
     </div>
   );
 }

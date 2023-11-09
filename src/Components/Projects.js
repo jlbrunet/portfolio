@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 const Projects = () => {
   return (
-    <div>
+    <div id="projects">
       <div className='flex flex-col justify-between'>
         <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets</p>
         <div className='flex flex-wrap justify-around px-20'>

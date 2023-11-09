@@ -1,6 +1,6 @@
 import React from 'react';
 import ScrollButton from './ScrollButton';
-
+import { Link } from 'react-scroll';
 
 const Home = () => {
   return (
@@ -19,7 +19,9 @@ const Home = () => {
           <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>Salut, moi c'est Julie</p>
           <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Développeuse Web Fullstack</p>
         </div>
-        <ScrollButton hoverColor="hover:bg-lime" groupHoverColor="group-hover:bg-lime"/>
+        <Link to="about" smooth={true}>
+          <ScrollButton hoverColor="hover:bg-lime" groupHoverColor="group-hover:bg-lime"/>
+        </Link>
       </div>
     </div>
   );
