@@ -6,7 +6,7 @@ export const ProjectsData = [
   {
     id: 1,
     title: "Mon Portfolio",
-    linkVideo: "",
+    image: "",
     description: "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
     languages: [
       { key:"jsIcon", element: <DiJavascript />, text: "JavaScript" },
@@ -18,7 +18,7 @@ export const ProjectsData = [
   {
     id: 2,
     title: "Paris Impro",
-    linkVideo: "",
+    image: "",
     description: "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
     languages: [
       { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
@@ -29,7 +29,7 @@ export const ProjectsData = [
   },
   {
     id: 3,
-    title: "My Only Sub",
+    image: "My Only Sub",
     linkVideo: "",
     description: "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
     languages: [
@@ -41,7 +41,7 @@ export const ProjectsData = [
   },
   {
     id: 4,
-    title: "On Air",
+    image: "On Air",
     linkVideo: "",
     description: "Marketplace de mise en relation entre les stand-uppers et les clubs",
     languages: [

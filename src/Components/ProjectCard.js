@@ -2,11 +2,11 @@ import React from 'react';
 
 const ProjectCard = (props) => {
 
-  const { linkVideo, title, description, languages, linkCode } = props
+  const { image, title, description, languages, linkCode } = props
 
   return (
     <div className='rounded-3xl bg-purple w-[20rem] h-[35rem]'>
-      <p className='w-full h-[45%] bg-white m-auto rounded-md'>{linkVideo}</p>
+      <p className='w-full h-[45%] bg-white m-auto rounded-md'>{image}</p>
       <div className='w-full h-[55%] px-5 m-auto flex flex-col justify-between'>
         <div>
           <p className='text-2xl py-3'><b>{title}</b></p>
