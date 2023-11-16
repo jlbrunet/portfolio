@@ -13,9 +13,15 @@ const Projects = () => {
   }
 
   const closeVideo = () => {
-    setSelectedVideo(null);
-    const projectContainer = document.getElementById("projects-container")
-    projectContainer.classList.remove("blur-sm")
+    const videoContainer = document.getElementById("video-container")
+    videoContainer.classList.add("animate-revealout")
+    setTimeout(() => {
+      const projectContainer = document.getElementById("projects-container")
+      projectContainer.classList.remove("blur-sm")
+    }, 500);
+    setTimeout(() => {
+      setSelectedVideo(null)
+    }, 900);
   }
 
   return (
@@ -41,7 +47,7 @@ const Projects = () => {
       {selectedVideo && (
         <div>
           <div onClick={closeVideo} className='absolute top-0 left-0 w-full h-full'></div>
-          <div className='absolute left-1/2 top-[10%] translate-x-center' style={{width: '1200px'}}>
+          <div id="video-container" className='absolute top-[10%] left-1/2 translate-x-center animate-revealin w-[1200px]'>
             <div className='relative'>
               <button onClick={closeVideo} className='absolute top-0 right-0 text-white text-2xl opacity-75 hover:opacity-100 z-20'><IoIosCloseCircle /></button>
               <div className='z-10'>{selectedVideo}</div>

@@ -29,15 +29,20 @@ module.exports = {
           '0%': {width: '0.5em'},
           '35%': {width: '2.5em'},
         },
-        revealIn: {
-          '0%': {opacity: 0, transform: 'translateX(-50%)'},
-          '100%': {opacity: 1, transform: 'translateX(0%)'}
-        }
+        revealin: {
+          '0%': {opacity: 0},
+          '100%': {opacity: 1}
+        },
+        revealout: {
+          '0%': {opacity: 1},
+          '100%': {opacity: 0}
+        },
       },
       animation: {
         'down': 'down 2s infinite',
         'spark': 'spark 2s infinite',
-        'revealIn': 'reavealIn 1s ease-in-out forwards'
+        'revealin': 'revealin 0.8s ease-in-out forwards',
+        'revealout': 'revealout 0.8s ease-in-out forwards'
       },
       translate: {
         center: "-50%"
