@@ -11,7 +11,7 @@ const Projects = () => {
         Your browser does not support the video tag.
       </video>
       <div className='flex flex-col justify-between'>
-        <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets - SQL - ajouter play - figma</p>
+        <p className='w-full text-center text-6xl p-10 mb-10'>Mes projets</p>
         <div className='flex flex-wrap justify-around px-20'>
           {ProjectsData.map((data) => {
             return(<div className='basis-1/2 flex justify-center p-6' key={data.id}>
