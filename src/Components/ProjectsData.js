@@ -8,7 +8,7 @@ export const ProjectsData = [
     id: 1,
     title: "Mon Portfolio",
     image: "",
-    video: "",
+    video: <video loading="lazy" width="1200px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
     description: "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
     languages: [
       { key:"jsIcon", element: <DiJavascript />, text: "JavaScript" },
