@@ -1,7 +1,7 @@
 import {React, useState} from 'react';
 import ProjectCard from './ProjectCard';
 import { ProjectsData } from './ProjectsData';
-import { IoIosCloseCircle } from "react-icons/io";
+import ModalProject from './ModalProject';
 
 const Projects = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -9,19 +9,15 @@ const Projects = () => {
   const handleCardClick = (video) => {
     setSelectedVideo(video);
     const projectContainer = document.getElementById("projects-container")
-    projectContainer.classList.add("blur-sm")
+    projectContainer.classList.add("blur-sm", "pointer-events-none")
   }
 
   const closeVideo = () => {
     const videoContainer = document.getElementById("video-container")
     videoContainer.classList.add("animate-revealout")
-    setTimeout(() => {
-      const projectContainer = document.getElementById("projects-container")
-      projectContainer.classList.remove("blur-sm")
-    }, 500);
-    setTimeout(() => {
-      setSelectedVideo(null)
-    }, 900);
+    const projectContainer = document.getElementById("projects-container")
+    projectContainer.classList.remove("blur-sm", "pointer-events-none")
+    setSelectedVideo(null)
   }
 
   return (
@@ -44,17 +40,13 @@ const Projects = () => {
           })}
         </div>
       </div>
-      {selectedVideo && (
-        <div>
-          <div onClick={closeVideo} className='absolute top-0 left-0 w-full h-full'></div>
-          <div id="video-container" className='absolute top-[10%] left-1/2 translate-x-center animate-revealin w-[1200px]'>
-            <div className='relative'>
-              <button onClick={closeVideo} className='absolute top-0 right-0 text-white text-2xl opacity-75 hover:opacity-100 z-20'><IoIosCloseCircle /></button>
-              <div className='z-10'>{selectedVideo}</div>
-            </div>
-          </div>
-        </div>
-      )}
+      {selectedVideo &&
+        <ModalProject
+        onClick={() => closeVideo()}
+        selectedVideo={selectedVideo}
+        sizeVideo={selectedVideo.props.width}
+        />
+      }
     </div>
   );
 }

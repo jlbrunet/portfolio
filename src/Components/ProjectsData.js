@@ -8,7 +8,7 @@ export const ProjectsData = [
     id: 1,
     title: "Mon Portfolio",
     image: "",
-    video: <video loading="lazy" width="1200px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+    video: "",
     description: "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
     languages: [
       { key:"jsIcon", element: <DiJavascript />, text: "JavaScript" },
@@ -20,7 +20,7 @@ export const ProjectsData = [
   {
     id: 2,
     title: "Paris Impro",
-    video: "",
+    video: <video loading="lazy" width="400px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
     image: <img src={require("../assets/parisImproImage.png")} alt="projet mos" className='w-full h-full object-cover rounded-t-3xl'/>,
     description: "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
     languages: [
