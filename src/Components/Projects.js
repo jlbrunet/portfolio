@@ -29,7 +29,7 @@ const Projects = () => {
             return(<div className='flex flex-wrap p-6' key={data.id}>
               <ProjectCard
                 image={data.image}
-                video={data.video}
+                videoDisplayed={data.videoDisplayed}
                 title={data.title}
                 description={data.description}
                 languages={data.languages}

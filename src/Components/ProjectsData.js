@@ -7,8 +7,9 @@ export const ProjectsData = [
   {
     id: 1,
     title: "Mon Portfolio",
-    image: "",
+    image: <img src={require("../assets/portfolioImage.png")} alt="projet portolfio" className='w-full h-full object-cover rounded-t-3xl'/>,
     video: "",
+    videoDisplayed: false,
     description: "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
     languages: [
       { key:"jsIcon", element: <DiJavascript />, text: "JavaScript" },
@@ -21,7 +22,8 @@ export const ProjectsData = [
     id: 2,
     title: "Paris Impro",
     video: <video loading="lazy" width="400px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
-    image: <img src={require("../assets/parisImproImage.png")} alt="projet mos" className='w-full h-full object-cover rounded-t-3xl'/>,
+    videoDisplayed: true,
+    image: <img src={require("../assets/parisImproImage.png")} alt="projet paris impro" className='w-full h-full object-cover rounded-t-3xl'/>,
     description: "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
     languages: [
       { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
@@ -37,6 +39,7 @@ export const ProjectsData = [
     title: "My Only Sub",
     image: <img src={require("../assets/mosImage.png")} alt="projet mos" className='w-full h-full rounded-t-3xl'/>,
     video: <video loading="lazy" width="1200px" className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+    videoDisplayed: true,
     description: "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois",
     languages: [
       { key:"rubyIcon", element: <DiRubyRough />, text: "Ruby" },
