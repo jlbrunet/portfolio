@@ -1,12 +1,39 @@
-import React from 'react';
+import { React, useState } from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
 import ScrollButton from './ScrollButton'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-scroll';
+import ClipboardJS from 'clipboard';
 
 const About = () => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
+  const emailAddress = 'juliebrunet.pro@outlook.fr';
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setIsCopied(false)
+  };
+
+  const handleButtonClick = () => {
+    const clipboard = new ClipboardJS('.clipboard-btn', {
+      text: () => emailAddress,
+    });
+
+    clipboard.on('success', () => {
+      setIsCopied(true);
+      clipboard.destroy();
+    });
+
+    clipboard.onClick({ currentTarget: document.querySelector('.clipboard-btn') });
+  };
+
   return (
     <div className='h-screen flex flex-col' id="about">
       <div className="h-full w-full flex items-center justify-center">
@@ -25,10 +52,14 @@ const About = () => {
             <br></br>
             <p className='text-xs sm:text-base lg:text-xl'><b>Autodidacte</b>, j'ai ensuite continué de me former  en explorant de nouvelles technologies et en relevant des défis passionnants. J'ai eu l'opportunité de travailler sur divers sites web, tant en équipe qu'en solo. Ces expériences m'ont permis d'acquérir une expertise variée, allant <b>de la conception à la programmation</b>, et assurant par la suite la maintenance des sites web.</p>
             <br></br>
-            <p className='text-xs sm:text-base lg:text-xl'>Aujourd'hui, je mets cette passion et cette expertise au service de mes projets et de mes clients, afin de créer des solutions web innovantes et adaptées à leurs besoins. <b>Impatiente de relever de nouveaux défis</b>, n’hésite pas à me contacter si tu souhaites que l’on travaille ensemble </p>
-            <div className='w-full flex justify-center'>
-              <button className='rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%]'>
-              <a href="mailto:juliebrunet.pro@outlook.fr"><FontAwesomeIcon icon={faEnvelope} /></a>
+            <p className='text-xs sm:text-base lg:text-xl'>Aujourd'hui, je mets cette passion et cette expertise au service de mes projets et de mes clients, afin de créer des solutions web innovantes et adaptées à leurs besoins. <b>Impatiente de relever de nouveaux défis</b>, n’hésite pas à me contacter si tu souhaites que l’on travaille ensemble : </p>
+            <div className='w-full flex justify-center' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+              <button onClick={handleButtonClick} className='relative flex items-center justify-around rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%] clipboard-btn'>
+                <div className='m-2'><FontAwesomeIcon icon={faEnvelope} /></div>
+                {isHovered && <span className='text-xl m-2'>{emailAddress}</span>}
+                {isCopied && (
+                  <div className="absolute bottom-[-1px] text-sm text-lime">Email copié !</div>
+                )}
               </button>
             </div>
           </div>
