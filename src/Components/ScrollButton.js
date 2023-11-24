@@ -5,8 +5,8 @@ const ScrollButton = (props) => {
   const { hoverColor, groupHoverColor } = props
 
   return (
-    <div className='relative mb-5 lg:mb-10 mx-auto w-10 h-10 lg:w-12 lg:h-12 group'>
-      <button className={`flex flex-col items-center w-10 h-10 lg:w-12 lg:h-12 opacity-80 rounded-custom1 pt-1 animate-down ${hoverColor} hover:animate-none transition duration-300`}>
+    <div className='relative mb-5 lg:mb-10 mx-auto w-10 h-10 lg:w-12 lg:h-12 animate-bounce hover:animate-none group'>
+      <button className={`flex flex-col items-center w-10 h-10 lg:w-12 lg:h-12 opacity-80 rounded-custom1 pt-1 ${hoverColor} transition duration-300`}>
         <div className="w-4 h-4 lg:w-5 lg:h-5 border-r-2 border-b-2 lg:border-r-4 lg:border-b-4 rounded-sm lg:rounded border-violet rotate-45"></div>
         <div className="w-4 h-4 lg:w-5 lg:h-5 border-r-2 border-b-2 lg:border-r-4 lg:border-b-4 rounded-sm lg:rounded border-violet rotate-45 mt-[-0.4rem] mb-[-0.2rem] lg:mt-[-0.5rem]"></div>
       </ button>
