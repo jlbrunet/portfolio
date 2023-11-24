@@ -1,8 +1,9 @@
-import React from 'react';
-import { FaCirclePlay } from "react-icons/fa6";
+import React from 'react'
+import { FaCirclePlay } from "react-icons/fa6"
+import { useTranslation } from 'react-i18next'
 
 const ProjectCard = (props) => {
-
+  const { t } = useTranslation();
   const { image, videoDisplayed, title, description, languages, linkCode, onClick } = props
 
   return (
@@ -27,7 +28,7 @@ const ProjectCard = (props) => {
                 </div>;
           })}</div>
         </div>
-        <div className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white'><button><a href={linkCode} target="_blank" rel="noreferrer"> Voir le code</a></button></div>
+        <div className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white'><button><a href={linkCode} target="_blank" rel="noreferrer">{t("projects.code")}</a></button></div>
       </div>
     </div>
   );

@@ -1,8 +1,23 @@
-import React from 'react';
+import { React, useEffect } from 'react';
 import ScrollButton from './ScrollButton';
 import { Link } from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language) => {
+    i18n.changeLanguage(language)
+    localStorage.setItem('selectedLanguage', language)
+  }
+
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem('selectedLanguage');
+    if (storedLanguage) {
+      i18n.changeLanguage(storedLanguage);
+    }
+  }, [i18n]);
+
   return (
     <div className='h-screen'>
       <div>
@@ -12,12 +27,12 @@ const Home = () => {
       </div>
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
         <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
-          <button>FR</button>
-          <button className='my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
+          <button onClick={() => changeLanguage("fr")}>FR</button>
+          <button onClick={() => changeLanguage("en")} className='my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
         </div>
         <div>
-          <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>Salut, moi c'est Julie</p>
-          <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Développeuse Web Fullstack</p>
+          <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
+          <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>{t('home.profession')}</p>
         </div>
         <Link to="about" smooth={true}>
           <ScrollButton hoverColor="hover:bg-lime" groupHoverColor="group-hover:bg-lime"/>

@@ -1,0 +1,48 @@
+{
+  "home": {
+    "greeting": "Salut, moi c'est Julie",
+    "profession": "Développeuse web Fullstack"
+  },
+  "about": {
+    "welcome": "Bienvenue !",
+    "iam": "Je suis une",
+    "profession": "développeuse web fullstack",
+    "formation": "basée à Paris. Passionnée par l'art de créer des sites web à la fois fonctionnels et esthétiques, j'ai suivi la formation du Wagon afin d'apprendre les fondements du code et de la programmation orientée objet.",
+    "self-learner": "Autodidacte",
+    "work": ", j'ai ensuite continué de me former  en explorant de nouvelles technologies et en relevant des défis passionnants. J'ai eu l'opportunité de travailler sur divers sites web, tant en équipe qu'en solo. Ces expériences m'ont permis d'acquérir une expertise variée, allant",
+    "conception": "de la conception à la programmation",
+    "maintenance": ", et assurant par la suite la maintenance des sites web.",
+    "expertise": "Aujourd'hui, je mets cette passion et cette expertise au service de mes projets et de mes clients, afin de créer des solutions web innovantes et adaptées à leurs besoins.",
+    "challenge": "Impatiente de relever de nouveaux défis,",
+    "together": "n’hésite pas à me contacter si tu souhaites que l’on travaille ensemble :",
+    "mail": "Email copié !"
+  },
+  "projects": {
+    "header": "Mes projets",
+    "titles": {
+      "portfolio": "Mon Portfolio",
+      "paris impro": "Paris Impro",
+      "mos": "My Only Sub"
+    },
+    "descriptions": {
+      "portfolio": "Si tu es arrivé.e jusque-là c'est que tu n'as pas besoin de description ;)",
+      "paris impro": "Gestion des absences et des rattrapages des cours d'improvision pour une compagnie de théâtre",
+      "mos": "Proposition de la plateforme de streaming la plus adaptée pour le prochain mois"
+    },
+    "icons": {
+      "javascript": "JavaScript",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "ruby": "Ruby",
+      "ruby on rails": "Ruby on Rails",
+      "postgre sql": "PostgreSQL",
+      "bootstrap": "Bootstrap",
+      "figma": "Figma"
+    },
+    "code": "Voir le code"
+  },
+  "footer": {
+    "conception": "Conçu avec",
+    "by": "par Julie Brunet"
+  }
+}
