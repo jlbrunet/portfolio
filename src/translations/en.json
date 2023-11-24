@@ -1,0 +1,48 @@
+{
+  "home": {
+    "greeting": "Hi, I'm Julie",
+    "profession": "Fullstack Web Developer"
+  },
+  "about": {
+    "welcome": "Welcome!",
+    "iam": "I am a",
+    "profession": "fullstack web developer",
+    "formation": "based in Paris. Passionate about the art of creating functional and aesthetic websites, I went through the Wagon training to learn the fundamentals of code and object-oriented programming.",
+    "self-learner": "Self-learner",
+    "work": ", I then continued to educate myself by exploring new technologies and taking on exciting challenges. I had the opportunity to work on various websites, both in teams and solo. These experiences allowed me to gain diverse expertise, ranging",
+    "conception": "from design to programming",
+    "maintenance": ", and subsequently ensuring the maintenance of websites.",
+    "expertise": "Today, I bring this passion and expertise to my projects and clients, creating innovative web solutions tailored to their needs.",
+    "challenge": "Eager to take on new challenges,",
+    "together": "Feel free to contact me if you would like to work together:",
+    "mail": "Email copied!"
+  },
+  "projects": {
+    "header": "My Projects",
+    "titles": {
+      "portfolio": "My Portfolio",
+      "paris impro": "Paris Impro",
+      "mos": "My Only Sub"
+    },
+    "descriptions": {
+      "portfolio": "If you've made it this far, you don't need a description ;)",
+      "paris impro": "Management of absences and make-up classes for an improvisation theater company",
+      "mos": "Proposal for the most suitable streaming platform for the upcoming month"
+    },
+    "icons": {
+      "javascript": "JavaScript",
+      "react": "React",
+      "tailwind": "Tailwind",
+      "ruby": "Ruby",
+      "ruby on rails": "Ruby on Rails",
+      "postgre sql": "PostgreSQL",
+      "bootstrap": "Bootstrap",
+      "figma": "Figma"
+    },
+    "code": "See Code"
+  },
+  "footer": {
+    "conception": "Designed with",
+    "by": "by Julie Brunet"
+  }
+}
