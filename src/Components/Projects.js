@@ -21,10 +21,13 @@ const Projects = () => {
   }
 
   return (
-    <div id="projects" className='h-screen relative'>
-      <div className='flex flex-col' id="projects-container">
-        <p className='w-full text-center text-6xl p-10'>Mes projets</p>
-        <div className='flex flex-wrap justify-around px-20'>
+    <div id="projects" className='min-h-screen relative'>
+      <div className='min-h-screen flex flex-col justify-around' id="projects-container">
+        <div className='text-center text-6xl p-20 relative'>
+          <div className='absolute top-0 left-1/2 translate-x-center h-full w-96 bg-purple rounded-custom2'></div>
+          <p className='h-full absolute top-0 left-1/2 translate-x-center flex items-center'>Mes projets</p>
+        </div>
+        <div className='flex flex-wrap justify-around'>
           {ProjectsData.map((data) => {
             return(<div className='flex flex-wrap p-6' key={data.id}>
               <ProjectCard
