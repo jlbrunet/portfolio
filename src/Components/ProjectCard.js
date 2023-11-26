@@ -8,7 +8,7 @@ const ProjectCard = (props) => {
 
   return (
     <div className='rounded-3xl bg-purple w-[20rem] h-[35rem]'>
-      {videoDisplayed && <div className='w-full h-[45%] relative opacity-50 hover:opacity-100'>
+      {videoDisplayed && <div className='w-full h-[45%] relative opacity-50 transition-opacity duration-300 ease-in-out hover:opacity-100'>
         <button onClick={onClick} className='absolute top-0 left-0 w-full h-full rounded-3xl'>
           <div className='absolute top-1/2 left-1/2 text-7xl bg-white rounded-full border-2 text-violet opacity-90 translate-y-center translate-x-center'><FaCirclePlay /></div>
         </button>
@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
                 </div>;
           })}</div>
         </div>
-        <a href={linkCode} target="_blank" rel="noreferrer" className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white hover:bg-violet hover:text-white'>{t("projects.code")}</a>
+        <a href={linkCode} target="_blank" rel="noreferrer" className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white hover:bg-violet hover:text-white transition-colors duration-500 ease-in-out'>{t("projects.code")}</a>
       </div>
     </div>
   );

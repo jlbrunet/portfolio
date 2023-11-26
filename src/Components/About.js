@@ -1,4 +1,4 @@
-import { React, useRef, useState, useEffect } from 'react';
+import { React, useRef, useState, useEffect, useCallback } from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
 import ScrollButton from './ScrollButton'
@@ -16,6 +16,30 @@ const About = () => {
   const emailAddress = 'juliebrunet.pro@outlook.fr';
   const containerRef = useRef(null);
   const emailRef = useRef(null);
+  const [scrollVisible, setScrollVisible] = useState(true);
+
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY;
+    const sectionElement = document.getElementById('about');
+    const { top } = sectionElement.getBoundingClientRect();
+    const scrollY = window.scrollY + top;
+    console.log(scrollY);
+    const threshold = scrollY;
+
+    if (scrolled > threshold && scrollVisible) {
+      setScrollVisible(false);
+    } else if (scrolled <= threshold && !scrollVisible) {
+      setScrollVisible(true);
+    }
+  }, [scrollVisible]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
 
   const handleMouseEnter = (event) => {
     setIsHovered(true);
@@ -83,9 +107,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Link to="projects" smooth={true}>
-        <ScrollButton groupHoverColor="group-hover:bg-purple"/>
-      </Link>
+      <div className={`${scrollVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in-out`}>
+        <Link to="projects" smooth={true}>
+          <ScrollButton groupHoverColor="group-hover:bg-purple"/>
+        </Link>
+      </div>
     </div>
   );
 }

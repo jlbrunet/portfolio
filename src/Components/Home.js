@@ -1,10 +1,11 @@
-import { React, useEffect } from 'react';
+import { React, useEffect, useState, useCallback } from 'react';
 import ScrollButton from './ScrollButton';
 import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
   const { t, i18n } = useTranslation()
+  const [scrollVisible, setScrollVisible] = useState(true);
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
@@ -31,6 +32,25 @@ const Home = () => {
     storedLanguage.toUpperCase() === "FR" ? enButton.classList.add('font-extralight') : frButton.classList.add('font-extralight')
   }, [i18n]);
 
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY;
+    const threshold = 100;
+
+    if (scrolled > threshold && scrollVisible) {
+      setScrollVisible(false);
+    } else if (scrolled <= threshold && !scrollVisible) {
+      setScrollVisible(true);
+    }
+  }, [scrollVisible]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+
   return (
     <div className='h-screen'>
       <div>
@@ -41,11 +61,11 @@ const Home = () => {
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
         <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
           <div className='relative w-12 h-12 mt-3 group'>
-            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 group-hover:transition-colors group-hover:duration-500 group-hover:ease-in-out"></div>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 transition-colors duration-500 ease-in-out"></div>
             <button onClick={() => changeLanguage("fr")} className='frButton h-full absolute top-0 left-1/2 translate-x-center'>FR</button>
           </div>
           <div className='relative w-12 h-12 mt-3 mx-3 group'>
-            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 group-hover:transition-colors group-hover:duration-500 group-hover:ease-in-out"></div>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 transition-colors duration-500 ease-in-out"></div>
             <button onClick={() => changeLanguage("en")} className='enButton h-full absolute top-0 left-1/2 translate-x-center'>EN</button>
           </div>
         </div>
@@ -53,9 +73,11 @@ const Home = () => {
           <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
           <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>{t('home.profession')}</p>
         </div>
-        <Link to="about" smooth={true}>
-          <ScrollButton groupHoverColor="group-hover:bg-lime"/>
-        </Link>
+        <div className={`${scrollVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in-out`}>
+          <Link to="about" smooth={true}>
+            <ScrollButton groupHoverColor="group-hover:bg-lime"/>
+          </Link>
+        </div>
       </div>
     </div>
   );
