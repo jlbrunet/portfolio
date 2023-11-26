@@ -78,7 +78,7 @@ const About = () => {
             <div className="hidden md:block absolute top-[0%] left-[-3.5%] lg:top-[8%] lg:left-[-1.8%] 2xl:top-[10%] 2xl:left-[-1.5%] "><Spark rotate='rotate-[218deg]'/></div>
             <div className="hidden md:block absolute top-[-9%] left-[-1%] lg:top-[-1%] lg:left-[-0.1%]"><Spark rotate='rotate-[238deg]'/></div>
           </div>
-          <div className='absolute top-[13%] left-0 w-full pr-[15%] pl-[15%] text-justify'>
+          <div className='absolute top-[13%] left-0 w-full pr-[15%] pl-[15%] text-justify 2xl:pt-12'>
             <p className='text-center text-xl sm:text-3xl lg:text-6xl'><b>{t('about.welcome')}</b></p>
             <br></br>
             <br></br>
@@ -88,6 +88,7 @@ const About = () => {
             <br></br>
             <p className='text-[10px] md:text-lg 2xl:text-xl'>{t('about.expertise')} <b>{t('about.challenge')} </b>{t('about.together')}</p>
             <br></br>
+            <br className='hidden 2xl:block'></br>
             <div className='w-full flex justify-center'>
               <div
                 onClick={handleButtonClick}

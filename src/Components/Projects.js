@@ -41,7 +41,7 @@ const Projects = () => {
                 languages={data.languages}
                 linkCode={data.linkCode}
                 onClick={() => handleCardClick(data.video)}
-              />
+                />
             </div>)
           })}
         </div>
@@ -50,11 +50,11 @@ const Projects = () => {
         <ModalProject
         onClick={() => closeVideo()}
         selectedVideo={selectedVideo}
-        sizeVideo={selectedVideo.props.width}
         />
       }
     </div>
   );
 }
+
 
 export default Projects;

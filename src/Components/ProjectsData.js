@@ -9,7 +9,7 @@ const ProjectsData = () => {
 
   const getProjectsData = [
     {
-      id: 1,
+      id: 0,
       title: t("projects.titles.portfolio"),
       image:
       i18n.language === 'fr' ? (
@@ -28,9 +28,15 @@ const ProjectsData = () => {
       linkCode: "https://github.com/jlbrunet/portfolio"
     },
     {
-      id: 2,
+      id: 1,
       title: t("projects.titles.paris impro"),
-      video: <video width="400px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      video: <video key={1} className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      videoSize: [
+        { twoXl: '400px',
+          md: '350px',
+          default: '300px'
+        }
+      ],
       videoDisplayed: true,
       image: <img src={require("../assets/parisImproImage.png")} alt="paris impro" className='w-full h-full object-cover rounded-t-3xl'/>,
       description: t('projects.descriptions.paris impro'),
@@ -44,10 +50,15 @@ const ProjectsData = () => {
       linkCode: "https://github.com/jlbrunet/Paris_Impro_Application"
     },
     {
-      id: 3,
+      id: 2,
       title: t('projects.titles.mos'),
       image: <img src={require("../assets/mosImage.png")} alt="my only sub" className='w-full h-full rounded-t-3xl'/>,
-      video: <video width="1200px" className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      video: <video key={2} className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      videoSize: [
+        { twoXl: '1200px',
+          md: '1000px',
+        }
+      ],
       videoDisplayed: true,
       description: t('projects.descriptions.mos'),
       languages: [
