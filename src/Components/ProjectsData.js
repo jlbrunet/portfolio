@@ -56,7 +56,8 @@ const ProjectsData = () => {
       video: <video key={2} className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
       videoSize: [
         { twoXl: '1200px',
-          md: '1000px',
+          lg: '1000px',
+          md: '768px',
         }
       ],
       videoDisplayed: true,

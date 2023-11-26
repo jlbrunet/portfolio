@@ -25,9 +25,11 @@ const ModalProject = (props) => {
     width: '100%'
   };
 
-  if (windowWidth >= 1536) {
+  if (windowWidth >= 1536 && sizeVideo.twoXl) {
     videoContainerStyle.width = `${sizeVideo.twoXl}`
-  } else if (windowWidth >= 768) {
+  } else if (windowWidth >= 1024 && sizeVideo.lg) {
+    videoContainerStyle.width = `${sizeVideo.lg}`
+  } else if (windowWidth >= 768 && sizeVideo.md) {
     videoContainerStyle.width = `${sizeVideo.md}`
   } else if (windowWidth <768 && sizeVideo.default) {
     videoContainerStyle.width = `${sizeVideo.default}`
