@@ -23,7 +23,6 @@ const About = () => {
     const sectionElement = document.getElementById('about');
     const { top } = sectionElement.getBoundingClientRect();
     const scrollY = window.scrollY + top;
-    console.log(scrollY);
     const threshold = scrollY;
 
     if (scrolled > threshold && scrollVisible) {

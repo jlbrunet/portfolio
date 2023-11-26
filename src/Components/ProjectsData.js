@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 
 const ProjectsData = () => {
   const { t, i18n } = useTranslation()
+
   const getProjectsData = [
     {
       id: 1,
@@ -29,7 +30,7 @@ const ProjectsData = () => {
     {
       id: 2,
       title: t("projects.titles.paris impro"),
-      video: <video loading="lazy" width="400px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      video: <video width="400px" className='rounded-xl' controls><source src={require("../assets/parisImproVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
       videoDisplayed: true,
       image: <img src={require("../assets/parisImproImage.png")} alt="paris impro" className='w-full h-full object-cover rounded-t-3xl'/>,
       description: t('projects.descriptions.paris impro'),
@@ -46,7 +47,7 @@ const ProjectsData = () => {
       id: 3,
       title: t('projects.titles.mos'),
       image: <img src={require("../assets/mosImage.png")} alt="my only sub" className='w-full h-full rounded-t-3xl'/>,
-      video: <video loading="lazy" width="1200px" className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
+      video: <video width="1200px" className='rounded-xl' controls><source src={require("../assets/mosVideo.mp4")} type="video/mp4" />Ton navigateur ne supporte pas la vidéo.</video>,
       videoDisplayed: true,
       description: t('projects.descriptions.mos'),
       languages: [
