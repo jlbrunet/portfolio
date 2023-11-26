@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useRef, useState, useEffect, useCallback } from 'react';
 import profilePicture from '../assets/profilePicture.jpg'
 import Spark from './Spark'
 import ScrollButton from './ScrollButton'
@@ -12,15 +12,44 @@ const About = () => {
   const { t } = useTranslation();
   const [isHovered, setIsHovered] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const [currentWidth, setCurrentWidth] = useState();
   const emailAddress = 'juliebrunet.pro@outlook.fr';
+  const containerRef = useRef(null);
+  const emailRef = useRef(null);
+  const [scrollVisible, setScrollVisible] = useState(true);
 
-  const handleMouseEnter = () => {
+  const handleScroll = useCallback(() => {
+    const scrolled = window.scrollY;
+    const sectionElement = document.getElementById('about');
+    const { top } = sectionElement.getBoundingClientRect();
+    const scrollY = window.scrollY + top;
+    console.log(scrollY);
+    const threshold = scrollY;
+
+    if (scrolled > threshold && scrollVisible) {
+      setScrollVisible(false);
+    } else if (scrolled <= threshold && !scrollVisible) {
+      setScrollVisible(true);
+    }
+  }, [scrollVisible]);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+
+  const handleMouseEnter = (event) => {
     setIsHovered(true);
+    emailRef.current.style.display = "inline-block"
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
     setIsCopied(false)
+    emailRef.current.style.display = "none"
   };
 
   const handleButtonClick = () => {
@@ -35,6 +64,10 @@ const About = () => {
 
     clipboard.onClick({ currentTarget: document.querySelector('.clipboard-btn') });
   };
+
+  useEffect(() => {
+    setCurrentWidth(containerRef.current.offsetWidth);
+  }, [isHovered]);
 
   return (
     <div className='h-screen flex flex-col' id="about">
@@ -55,21 +88,30 @@ const About = () => {
             <p className='text-xs sm:text-base lg:text-xl'><b>{t('about.self-learner')}</b>{t('about.work')} <b>{t('about.conception')}</b>{t('about.maintenance')}</p>
             <br></br>
             <p className='text-xs sm:text-base lg:text-xl'>{t('about.expertise')} <b>{t('about.challenge')} </b>{t('about.together')}</p>
-            <div className='w-full flex justify-center' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <button onClick={handleButtonClick} className='relative flex items-center justify-around rounded-custom3 bg-blue text-xs sm:text-xl lg:text-2xl py-[0.6%] px-[1%] clipboard-btn'>
-                <div className='m-2'><FontAwesomeIcon icon={faEnvelope} /></div>
-                {isHovered && <span className='text-xl m-2'>{emailAddress}</span>}
+            <div className='w-full flex justify-center'>
+              <div
+                onClick={handleButtonClick}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave} className='relative flex rounded-custom3 bg-blueLight text-2xl h-14 clipboard-btn transition-width duration-500 ease-in' style={{ width: `${currentWidth}px` }}>
+                <div ref={containerRef} className='flex items-center justify-around px-6'>
+                  <div className=''><FontAwesomeIcon icon={faEnvelope}/></div>
+                  <p className='text-xl font-thin m-2 hidden cursor-pointer' ref={emailRef}>{emailAddress}</p>
+                </div>
                 {isCopied && (
-                  <div className="absolute bottom-[-1px] text-sm text-lime">{t('about.mail')}</div>
+                  <div className='absolute bottom-[-20px] left-1/2 translate-x-center flex items-center justify-center rounded-custom3 bg-blueMedium h-8 w-20'>
+                    <div className="text-center text-sm w-20">{t('about.mail')}</div>
+                  </div>
                 )}
-              </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <Link to="projects" smooth={true}>
-        <ScrollButton hoverColor="hover:bg-purple" groupHoverColor="group-hover:bg-purple"/>
-      </Link>
+      <div className={`${scrollVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in-out`}>
+        <Link to="projects" smooth={true}>
+          <ScrollButton groupHoverColor="group-hover:bg-purple"/>
+        </Link>
+      </div>
     </div>
   );
 }

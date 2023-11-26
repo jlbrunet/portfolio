@@ -9,6 +9,7 @@ module.exports = {
         beige: 'rgb(248, 233, 216, 0.8)',
         blue: 'rgb(153, 195, 190)',
         blueLight: 'rgb(153, 195, 190, 0.4)',
+        blueMedium: 'rgb(153, 195, 190, 0.6)',
         violet: 'rgb(59, 56, 82)',
         lime: 'rgb(223, 230, 192)',
         purple: 'rgb(181, 151, 193, 0.4)',
