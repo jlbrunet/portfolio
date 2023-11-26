@@ -40,10 +40,14 @@ const Home = () => {
       </div>
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
         <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
-          <div className='mt-2 w-12 h-12 bg-blue opacity-40 rounded-custom3 flex items-center justify-center'>
-            <button onClick={() => changeLanguage("fr")} className='frButton'>FR</button>
+          <div className='relative w-12 h-12 mt-3 group'>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3"></div>
+            <button onClick={() => changeLanguage("fr")} className='frButton h-full absolute top-0 left-1/2 translate-x-center'>FR</button>
           </div>
-          <button onClick={() => changeLanguage("en")} className='enButton my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
+          <div className='relative w-12 h-12 mt-3 mx-3 group'>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3"></div>
+            <button onClick={() => changeLanguage("en")} className='enButton h-full absolute top-0 left-1/2 translate-x-center'>EN</button>
+          </div>
         </div>
         <div>
           <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
