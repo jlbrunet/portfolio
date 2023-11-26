@@ -54,24 +54,24 @@ const Home = () => {
   return (
     <div className='h-screen'>
       <div>
-        <div className='absolute left-[5%] top-[15%] lg:left-[10%] lg:top-[15%] w-[40%] h-[30%] md:w-[35%] md:h-[35%] lg:w-[30%] lg:h-[40%] xl:w-[25%] xl:h-[50%] bg-lime opacity-80 rounded-custom1'></div>
-        <div className='absolute left-[20%] top-[55%] lg:left-[25%] lg:top-[45%] w-[60%] h-[25%] md:w-[50%] md:h-[30%] lg:w-[35%] lg:h-[35%] xl:w-[30%] xl:h-[50%] bg-purple rounded-custom2'></div>
-        <div className='absolute left-[50%] top-[30%] lg:left-[60%] lg:top-[20%] xl:left-[70%] xl:top-[15%] w-[45%] h-[30%] md:w-[40%] md:h-[35%] lg:w-[35%] lg:h-[40%] xl:w-[25%] xl:h-[50%] bg-blue opacity-40 rounded-custom3'></div>
+        <div className='absolute min-w-56 w-1/2 h-1/4 top-1/4 left-0 lg:left-[10%] lg:top-[15%] md:w-[35%] md:h-[35%] lg:w-[30%] lg:h-[40%] xl:w-[25%] xl:h-[50%] bg-lime opacity-80 rounded-custom1'></div>
+        <div className='absolute min-w-80 w-2/3 h-1/5 top-1/2 right-1/4 lg:left-[25%] lg:top-[45%] md:w-[50%] md:h-[30%] lg:w-[35%] lg:h-[35%] xl:w-[30%] xl:h-[50%] bg-purple rounded-custom2'></div>
+        <div className='absolute min-w-48 w-1/2 h-1/4 top-1/3 right-0 lg:left-[60%] lg:top-[20%] xl:left-[70%] xl:top-[15%]  md:w-[40%] md:h-[35%] lg:w-[35%] lg:h-[40%] xl:w-[25%] xl:h-[50%] bg-blue opacity-40 rounded-custom3'></div>
       </div>
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
-        <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
+        <div className='text-base md:text-xl lg:text-xl xl:text-2xl flex justify-end'>
           <div className='relative w-12 h-12 mt-3 group'>
             <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 transition-colors duration-500 ease-in-out"></div>
             <button onClick={() => changeLanguage("fr")} className='frButton h-full absolute top-0 left-1/2 translate-x-center'>FR</button>
           </div>
-          <div className='relative w-12 h-12 mt-3 mx-3 group'>
+          <div className='relative w-12 h-12 mt-3 md:mx-3 group'>
             <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 transition-colors duration-500 ease-in-out"></div>
             <button onClick={() => changeLanguage("en")} className='enButton h-full absolute top-0 left-1/2 translate-x-center'>EN</button>
           </div>
         </div>
         <div>
-          <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
-          <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>{t('home.profession')}</p>
+          <p className='mb-8 text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
+          <p className='px-10 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>{t('home.profession')}</p>
         </div>
         <div className={`${scrollVisible ? 'opacity-100' : 'opacity-0'} transition-opacity duration-700 ease-in-out`}>
           <Link to="about" smooth={true}>
