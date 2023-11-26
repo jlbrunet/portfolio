@@ -41,11 +41,11 @@ const Home = () => {
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
         <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
           <div className='relative w-12 h-12 mt-3 group'>
-            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3"></div>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 group-hover:transition-colors group-hover:duration-500 group-hover:ease-in-out"></div>
             <button onClick={() => changeLanguage("fr")} className='frButton h-full absolute top-0 left-1/2 translate-x-center'>FR</button>
           </div>
           <div className='relative w-12 h-12 mt-3 mx-3 group'>
-            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3"></div>
+            <div className="frContainer group-hover:absolute group-hover:top-0 group-hover:left-1/2 group-hover:translate-x-center group-hover:h-full group-hover:w-12 group-hover:bg-blueLight group-hover:rounded-custom3 group-hover:transition-colors group-hover:duration-500 group-hover:ease-in-out"></div>
             <button onClick={() => changeLanguage("en")} className='enButton h-full absolute top-0 left-1/2 translate-x-center'>EN</button>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Home = () => {
           <p className='px-10 text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>{t('home.profession')}</p>
         </div>
         <Link to="about" smooth={true}>
-          <ScrollButton hoverColor="hover:bg-lime" groupHoverColor="group-hover:bg-lime"/>
+          <ScrollButton groupHoverColor="group-hover:bg-lime"/>
         </Link>
       </div>
     </div>

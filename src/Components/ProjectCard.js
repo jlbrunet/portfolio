@@ -28,7 +28,7 @@ const ProjectCard = (props) => {
                 </div>;
           })}</div>
         </div>
-        <div className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white'><button><a href={linkCode} target="_blank" rel="noreferrer">{t("projects.code")}</a></button></div>
+        <a href={linkCode} target="_blank" rel="noreferrer" className='w-32 text-center mx-auto mb-5 p-2 rounded-md bg-white hover:bg-violet hover:text-white'>{t("projects.code")}</a>
       </div>
     </div>
   );
