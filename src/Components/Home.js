@@ -4,18 +4,31 @@ import { Link } from 'react-scroll';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation()
 
   const changeLanguage = (language) => {
     i18n.changeLanguage(language)
     localStorage.setItem('selectedLanguage', language)
+    const currentLanguage = localStorage.selectedLanguage
+    const frButton = document.querySelector('.frButton')
+    const enButton = document.querySelector('.enButton')
+    if (currentLanguage.toUpperCase() === "EN") {
+      enButton.classList.remove('font-extralight')
+      frButton.classList.add('font-extralight')
+    } else {
+      frButton.classList.remove('font-extralight')
+      enButton.classList.add('font-extralight')
+    }
   }
 
   useEffect(() => {
-    const storedLanguage = localStorage.getItem('selectedLanguage');
+    const storedLanguage = localStorage.getItem('selectedLanguage')
     if (storedLanguage) {
       i18n.changeLanguage(storedLanguage);
     }
+    const frButton = document.querySelector('.frButton')
+    const enButton = document.querySelector('.enButton')
+    storedLanguage.toUpperCase() === "FR" ? enButton.classList.add('font-extralight') : frButton.classList.add('font-extralight')
   }, [i18n]);
 
   return (
@@ -27,8 +40,10 @@ const Home = () => {
       </div>
       <div className='absolute top-0 left-0 w-full h-full flex flex-col justify-between text-center font-semibold'>
         <div className='text-lg lg:text-xl xl:text-2xl flex justify-end'>
-          <button onClick={() => changeLanguage("fr")}>FR</button>
-          <button onClick={() => changeLanguage("en")} className='my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
+          <div className='mt-2 w-12 h-12 bg-blue opacity-40 rounded-custom3 flex items-center justify-center'>
+            <button onClick={() => changeLanguage("fr")} className='frButton'>FR</button>
+          </div>
+          <button onClick={() => changeLanguage("en")} className='enButton my-2 mx-3 lg:my-4 lg:mx-6'>EN</button>
         </div>
         <div>
           <p className='mb-8 text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl'>{t('home.greeting')}</p>
