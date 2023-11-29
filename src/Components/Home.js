@@ -13,7 +13,7 @@ const Home = () => {
     const currentLanguage = localStorage.selectedLanguage
     const frButton = document.querySelector('.frButton')
     const enButton = document.querySelector('.enButton')
-    if (currentLanguage.toUpperCase() === "EN") {
+    if (currentLanguage && currentLanguage.toUpperCase() === "EN") {
       enButton.classList.remove('font-extralight')
       frButton.classList.add('font-extralight')
     } else {
@@ -29,7 +29,11 @@ const Home = () => {
     }
     const frButton = document.querySelector('.frButton')
     const enButton = document.querySelector('.enButton')
-    storedLanguage.toUpperCase() === "FR" ? enButton.classList.add('font-extralight') : frButton.classList.add('font-extralight')
+    if (storedLanguage && storedLanguage.toUpperCase() === "FR") {
+      enButton.classList.add('font-extralight')
+    } else {
+      frButton.classList.add('font-extralight')
+    }
   }, [i18n]);
 
   const handleScroll = useCallback(() => {
