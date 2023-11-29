@@ -13,7 +13,7 @@ const Home = () => {
     const currentLanguage = localStorage.selectedLanguage
     const frButton = document.querySelector('.frButton')
     const enButton = document.querySelector('.enButton')
-    if (currentLanguage && currentLanguage.toUpperCase() === "EN") {
+    if (currentLanguage.toUpperCase() === "EN") {
       enButton.classList.remove('font-extralight')
       frButton.classList.add('font-extralight')
     } else {
@@ -25,14 +25,14 @@ const Home = () => {
   useEffect(() => {
     const storedLanguage = localStorage.getItem('selectedLanguage')
     if (storedLanguage) {
-      i18n.changeLanguage(storedLanguage);
-    }
-    const frButton = document.querySelector('.frButton')
-    const enButton = document.querySelector('.enButton')
-    if (storedLanguage && storedLanguage.toUpperCase() === "FR") {
-      enButton.classList.add('font-extralight')
-    } else {
-      frButton.classList.add('font-extralight')
+      i18n.changeLanguage(storedLanguage)
+      const frButton = document.querySelector('.frButton')
+      const enButton = document.querySelector('.enButton')
+      if (storedLanguage.toUpperCase() === "FR") {
+        enButton.classList.add('font-extralight')
+      } else {
+        frButton.classList.add('font-extralight')
+      }
     }
   }, [i18n]);
 
