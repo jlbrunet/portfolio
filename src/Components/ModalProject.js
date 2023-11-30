@@ -22,7 +22,12 @@ const ModalProject = (props) => {
   }, []);
 
   const videoContainerStyle = {
-    width: '100%'
+    width: '95%',
+    zIndex: 1000,
+    position: 'fixed',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)'
   };
 
   if (windowWidth >= 1536 && sizeVideo.twoXl) {
@@ -42,7 +47,7 @@ const ModalProject = (props) => {
   return (
     <div>
       <div onClick={onClick} className='absolute top-0 left-0 w-full h-full'></div>
-      <div id="video-container" style={videoContainerStyle} className='absolute top-[10%] left-1/2 translate-x-center animate-revealin'>
+      <div id="video-container" style={videoContainerStyle}>
         <div className='relative'>
           <button onClick={onClick} className='absolute top-0 right-0 text-white text-2xl opacity-50 hover:opacity-100 z-20'><IoIosCloseCircle /></button>
           <div className='z-10'>
