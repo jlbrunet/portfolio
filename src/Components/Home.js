@@ -23,12 +23,19 @@ const Home = () => {
   }
 
   useEffect(() => {
+    const navigatorLanguage = navigator.language.split('-')[0]
+    const frButton = document.querySelector('.frButton')
+    const enButton = document.querySelector('.enButton')
     const storedLanguage = localStorage.getItem('selectedLanguage')
     if (storedLanguage) {
       i18n.changeLanguage(storedLanguage)
-      const frButton = document.querySelector('.frButton')
-      const enButton = document.querySelector('.enButton')
       if (storedLanguage.toUpperCase() === "FR") {
+        enButton.classList.add('font-extralight')
+      } else {
+        frButton.classList.add('font-extralight')
+      }
+    } else {
+      if (navigatorLanguage.toUpperCase() === "FR") {
         enButton.classList.add('font-extralight')
       } else {
         frButton.classList.add('font-extralight')
