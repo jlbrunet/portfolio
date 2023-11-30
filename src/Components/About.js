@@ -71,23 +71,23 @@ const About = () => {
   return (
     <div className='h-screen flex flex-col' id="about">
       <div className="h-full w-full flex items-center justify-center">
-        <div className='relative w-[95%] md:w-[80%] h-[95%] bg-lime rounded-custom1'>
+        <div className='relative w-[95%] md:w-[80%] h-[95%] bg-lime rounded-custom6 md:rounded-custom1'>
           <div className='relative absolute top-[0%] left-[8%]'>
             <img src={profilePicture} alt="profil" className='w-20 sm:w-36 lg:w-48 rounded-full border-4 sm:border-8 border-lime'></img>
             <div className="hidden md:block absolute top-[12%] left-[-5.5%] lg:top-[20%] lg:left-[-3%] 2xl:top-[22%] 2xl:left-[-2.5%] "><Spark rotate='rotate-[200deg]'/></div>
             <div className="hidden md:block absolute top-[0%] left-[-3.5%] lg:top-[8%] lg:left-[-1.8%] 2xl:top-[10%] 2xl:left-[-1.5%] "><Spark rotate='rotate-[218deg]'/></div>
             <div className="hidden md:block absolute top-[-9%] left-[-1%] lg:top-[-1%] lg:left-[-0.1%]"><Spark rotate='rotate-[238deg]'/></div>
           </div>
-          <div className='absolute top-[13%] left-0 w-full pr-[15%] pl-[15%] text-justify 2xl:pt-12'>
+          <div className='absolute top-[7%] md:top-[13%] left-0 w-full pr-[15%] pl-[15%] text-justify 2xl:pt-12'>
             <p className='text-center text-xl sm:text-3xl lg:text-6xl'><b>{t('about.welcome')}</b></p>
             <br></br>
+            <br className='hidden md:block'></br>
+            <br className='hidden md:block'></br>
+            <p className='text-xs md:text-lg 2xl:text-xl'>{t('about.iam')} <b>{t('about.profession')}</b> {t('about.formation')}</p>
             <br></br>
+            <p className='text-xs md:text-lg 2xl:text-xl'><b>{t('about.self-learner')}</b>{t('about.work')} <b>{t('about.conception')}</b>{t('about.maintenance')}</p>
             <br></br>
-            <p className='text-[10px] md:text-lg 2xl:text-xl'>{t('about.iam')} <b>{t('about.profession')}</b> {t('about.formation')}</p>
-            <br></br>
-            <p className='text-[10px] md:text-lg 2xl:text-xl'><b>{t('about.self-learner')}</b>{t('about.work')} <b>{t('about.conception')}</b>{t('about.maintenance')}</p>
-            <br></br>
-            <p className='text-[10px] md:text-lg 2xl:text-xl'>{t('about.expertise')} <b>{t('about.challenge')} </b>{t('about.together')}</p>
+            <p className='text-xs md:text-lg 2xl:text-xl'>{t('about.expertise')} <b>{t('about.challenge')} </b>{t('about.together')}</p>
             <br></br>
             <br className='hidden 2xl:block'></br>
             <div className='w-full flex justify-center'>
