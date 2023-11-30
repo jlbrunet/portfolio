@@ -82,6 +82,7 @@ const About = () => {
             <p className='text-center text-xl sm:text-3xl lg:text-6xl'><b>{t('about.welcome')}</b></p>
             <br></br>
             <br></br>
+            <br></br>
             <p className='text-[10px] md:text-lg 2xl:text-xl'>{t('about.iam')} <b>{t('about.profession')}</b> {t('about.formation')}</p>
             <br></br>
             <p className='text-[10px] md:text-lg 2xl:text-xl'><b>{t('about.self-learner')}</b>{t('about.work')} <b>{t('about.conception')}</b>{t('about.maintenance')}</p>
