@@ -5,9 +5,7 @@
   <a href="https://github.com/jlbrunet/portfolio">
     <img src="public/favicon.ico" alt="Logo" width="80" height="80">
   </a>
-
-<h3 align="center">Portfolio</h3>
-
+  <h3 align="center">Portfolio</h3>
   <p align="center">
      Welcome to my portfolio! This project showcases my coding journey and various projects I've worked on. 
     <br />
@@ -29,15 +27,15 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Available scripts</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
+  <br />
 </details>
+
 
 ## About The Project
 
@@ -47,10 +45,12 @@
 
 <p>This portfolio serves as a window into my world, where you can explore not only who I am but also the projects that define my skills and passions.</p>
 
+
 ### Built With
 
 * [![React][React.js]][React-url]
 * [![Tailwind][Tailwind.com]][Tailwind-url]
+<br />
 
 ## Getting Started
 
@@ -60,6 +60,7 @@
   ```sh
   npm install npm@latest -g
   ```
+
 
 ### Installation
 
@@ -71,6 +72,8 @@
    ```sh
    npm install
    ```
+
+   
 ### Available Scripts
 
 Runs the app in the development mode :
@@ -83,12 +86,19 @@ Launches the test runner in the interactive watch mode :
 ```sh
 npm run test
 ```
+<br />
+
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Implement the Home, About, Projects, and Footer components in the React App.
+    - [x] Implement a ScrollButton in the Home Component to smoothly navigate to the About section.
+          A ScrollButton has been added to the Home component, allowing users to smoothly scroll to the About section for a better user experience.
+- [x] Enhance the About Component with dynamic content, styling, and interactive elements.
+    - [x] Implement a ScrollButton in the About Component to smoothly navigate to the Projects section.
+          A ScrollButton has been added to the About component, allowing users to smoothly scroll to the Projects section for a better user experience.
+- [x] Develop the Projects Component to showcase project cards, modals of the projects videos, and interactive features.
+<br />
+
 
 ## Contact
 
