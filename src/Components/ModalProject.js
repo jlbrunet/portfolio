@@ -47,7 +47,7 @@ const ModalProject = (props) => {
   return (
     <div>
       <div onClick={onClick} className='absolute top-0 left-0 w-full h-full'></div>
-      <div id="video-container" style={videoContainerStyle}>
+      <div id="video-container" className={videoLoaded ? '' : 'hidden'} style={videoContainerStyle}>
         <div className='relative'>
           <button onClick={onClick} className='absolute top-0 right-0 text-white text-2xl opacity-50 hover:opacity-100 z-20'><IoIosCloseCircle /></button>
           <div className='z-10'>
